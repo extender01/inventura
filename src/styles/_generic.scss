@@ -1,0 +1,53 @@
+
+button:focus {outline:0;}
+
+body {
+    font-family: 'Roboto'
+}
+
+.row {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+
+.btn {
+    background: none;
+    border: 1px grey solid;
+    color: grey;
+    border-radius: .4rem;
+    padding: 1rem;
+
+    &:hover {
+        background: grey;
+        color: white;
+        cursor: pointer;
+    }
+}
+
+
+
+//MIXINS
+
+@mixin frc($jc: center, $ai: center, $wrap: wrap) {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: $wrap;
+    justify-content: $jc;
+    align-items: $ai;
+    
+     
+}
+
+@mixin frs($ai: stretch, $wrap: wrap) {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: $wrap;
+    justify-content: space-around;
+    align-items: $ai;
+    @supports  (justify-content: space-evenly) {
+                justify-content: space-evenly;
+    }
+    
+     
+}
