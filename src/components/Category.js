@@ -8,16 +8,16 @@ import {architect} from '../data/barcodeDB';
 const Category = (props) => (
     <div className='category'>
         <div className='col'>
-            <button className='btn btn-outline-secondary' name='ahoj' onClick={() => {props.chooseCategory(architect)} }>ARCHITECT</button>
+            <button className='btn btn-outline-secondary' name='ahoj' onClick={() => {props.chooseCategory('architect')} }>ARCHITECT</button>
 
         </div>
         
         <div className='col'>
-                <button className='btn btn-outline-secondary' name='ahoj' onClick={() => {props.chooseCategory(architect)} }>RADIOMETER</button>
+                <button className='btn btn-outline-secondary' name='ahoj' onClick={() => {props.chooseCategory('radiometer')} }>RADIOMETER</button>
         </div>
 
         <div className='col'>
-            <button className='btn btn-outline-secondary' name='ahoj' onClick={() => {props.chooseCategory(architect)} }>OLYMPUS</button>
+            <button className='btn btn-outline-secondary' name='ahoj' onClick={() => {props.chooseCategory('architect')} }>OLYMPUS</button>
         </div>
 
         

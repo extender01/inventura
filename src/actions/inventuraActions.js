@@ -1,17 +1,28 @@
+import {barcodeDB} from '../data/barcodeDB';
 
 
-
-export const addItem = (item) => {
+export const addItem = (name, catNumber) => {
     return {
         type: 'ADD_ITEM',
-        addedItem: item
+        addedName: name,
+        addedCatNumber: catNumber
     }
 };
 
 export const chooseCategory = (category) => {
+
+    let reduced = barcodeDB.reduce((accumulator, current) => {
+        if(current.category === category) {
+            accumulator.push({catNumber: current.catNumber, name: current.name, amount: 0})
+            
+        }
+        return accumulator
+    }, [])
+    
+    
     return {
         type: 'CHOOSE_CATEGORY',
-        category
+        reduced
     }
 };
 

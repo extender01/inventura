@@ -23,7 +23,7 @@ class App extends React.Component {
 
   render() {
     return (
-      <div className="containter">
+      <div className="container">
         <Heading />
         <Category />
         <Input />

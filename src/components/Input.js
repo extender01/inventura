@@ -16,20 +16,21 @@ class Input extends React.Component {
                 barcodeDB.some((element) => {
                     // if(element.gtin === e.target[0].value) {
                     if(e.target[0].value.includes(element.gtin)) {
-                        this.props.addItem(element.name)
+                        this.props.addItem(element.name, element.catNumber)
                         return true
                     }
                     // NEJAKA ERROR ACTION
                     return false
                 })
+                e.target[0].value = ''
 
     }
     render() {
         return (
-            <div className='row'>
+            <div className='input'>
                 <form onSubmit={this.parseBC} className='col form-group'>
-                    <input className='form-control' name='input-field' id='input-field' placeholder='ČAROVÝ KÓD' />
-                    <button className='form-text text-muted'>PŘIDAT POLOŽKU</button>
+                    <input className='input__field' name='input__field' id='input-field' placeholder='ČAROVÝ KÓD' />
+                    <button className='btn'>PŘIDAT POLOŽKU</button>
                 </form>
             </div>
         );
@@ -38,8 +39,8 @@ class Input extends React.Component {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        addItem: (newItemArg) => {
-            dispatch(addItem(newItemArg))
+        addItem: (newNameArg, newCatNumberArg) => {
+            dispatch(addItem(newNameArg, newCatNumberArg))
         }
     }
 }

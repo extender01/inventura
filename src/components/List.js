@@ -6,7 +6,7 @@ import Item from './Item';
 const List = (props) => (
     <div className='list'>
         {props.items.map((element, index) => {
-            return <Item key={index} name={element.name} amount={element.amount} />
+            return <Item key={index} catNumber={element.catNumber} name={element.name} amount={element.amount} />
         })}
     
     </div>

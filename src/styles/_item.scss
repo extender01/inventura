@@ -1,3 +1,55 @@
 .item {
     @include frs();
+    border: 1px grey solid;
+    border-radius: 3px;
+    margin: .6rem 0;
+    font-weight: 600;
+    color: #333;
+    padding: 0 .5rem;
+
+
+    &__modifiers {
+        @include frs(center, nowrap);
+        & p, svg {
+            margin: 0 1rem;
+            &:hover {
+                cursor: pointer;
+                background: #eee;
+                
+            }
+        }
+
+        // flex-basis: 100px;
+        // flex-grow: 0;
+
+
+        
+    }
+
+    &__cat {
+        flex-basis: 40px;
+        flex-grow: 1;
+    }
+
+    &__name {
+        flex-basis: 300px;
+        flex-grow: 3;
+        padding-left: 1rem;
+    }
+
+    &__amount {
+        flex-basis: 30px;
+        flex-grow: .5;
+        padding-left: 1rem;
+    }
+}
+
+@media print {
+
+    html {
+        font-size: 62.5%;
+    }
+  .item__modifiers {
+    display: none;
+  }
 }
