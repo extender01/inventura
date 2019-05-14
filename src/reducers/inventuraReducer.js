@@ -7,27 +7,28 @@ const inventuraReducer = (state = {items:[]}, action) => {
 
         case 'CHOOSE_CATEGORY':
             console.log(action)
-            return {...state, items: action.reduced }
+            return {...state, group: action.group,  items: action.reduced}
 
         case 'CHANGE_AMOUNT':
             return {
                 ...state,
+                active: action.name,
                 items:  state.items.map((element) => {
                     if(element.name === action.name) {
                         switch (action.operation) {
                             case 'add':
-                                return {catNumber: element.catNumber, name: element.name, amount: element.amount + 1}
+                                return {...element, amount: element.amount + 1}
                             case 'subtract':
                                 if (element.amount > 0) {
-                                    return {catNumber: element.catNumber, name: element.name, amount: element.amount - 1}
+                                    return {...element, amount: element.amount - 1}
                                 } else return element
                             case 'reset':
-                                return {catNumber: element.catNumber, name: element.name, amount: 0}
-                            default: return {catNumber: element.catNumber, name: element.name, amount: element.amount}
+                                return {...element, amount: 0}
+                            default: return {...element}
      
                         }
                     } else {
-                        return {catNumber: element.catNumber, name: element.name, amount: element.amount}
+                        return {...element}
                     }
                 })
             }
@@ -44,9 +45,10 @@ const inventuraReducer = (state = {items:[]}, action) => {
             if (isAlreadyIn) {
                 return {
                     ...state,
+                    active: action.addedName,
                      items: state.items.map((element) => {
                          if(element.name === action.addedName) {
-                             return {catNumber: element.catNumber, name: element.name, amount: element.amount + 1}
+                             return {...element, amount: element.amount + 1}
                          } else {
                              return element
                          }
@@ -54,7 +56,7 @@ const inventuraReducer = (state = {items:[]}, action) => {
                 }
             // IT IS NOT THERE -> ADD IT TO ARRAY WITH AMOUNT OF 1
             } else {
-                return {...state, items: [...state.items, {catNumber: action.addedCatNumber, name: action.addedName, amount: 1}]}
+                return {...state, active: action.addedName, items: [...state.items, {catNumber: action.addedCatNumber, name: action.addedName, amount: 1}]}
 
             }
 

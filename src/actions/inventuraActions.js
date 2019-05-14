@@ -9,11 +9,11 @@ export const addItem = (name, catNumber) => {
     }
 };
 
-export const chooseCategory = (category) => {
+export const chooseCategory = (group) => {
 
     let reduced = barcodeDB.reduce((accumulator, current) => {
-        if(current.category === category) {
-            accumulator.push({catNumber: current.catNumber, name: current.name, amount: 0})
+        if(current.group === group) {
+            accumulator.push({catNumber: current.catNumber, name: current.name, category: current.category, amount: 0})
             
         }
         return accumulator
@@ -22,6 +22,7 @@ export const chooseCategory = (category) => {
     
     return {
         type: 'CHOOSE_CATEGORY',
+        group,
         reduced
     }
 };

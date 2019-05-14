@@ -2,6 +2,7 @@
   "name": "inventura",
   "version": "0.1.0",
   "private": true,
+  "homepage": "http://exty.cz/inventura",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.18",
     "@fortawesome/free-solid-svg-icons": "^5.8.2",

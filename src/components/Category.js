@@ -2,13 +2,14 @@ import React from 'react';
 import {connect} from 'react-redux';
 
 import {chooseCategory} from '../actions/inventuraActions';
-import {architect} from '../data/barcodeDB';
 
 
 const Category = (props) => (
     <div className='category'>
         <div className='col'>
-            <button className='btn btn-outline-secondary' name='ahoj' onClick={() => {props.chooseCategory('architect')} }>ARCHITECT</button>
+            <button className='btn btn-outline-secondary' name='ahoj' onClick={() => {
+                props.chooseCategory('architect')
+            } }>ARCHITECT</button>
 
         </div>
         
@@ -17,8 +18,13 @@ const Category = (props) => (
         </div>
 
         <div className='col'>
-            <button className='btn btn-outline-secondary' name='ahoj' onClick={() => {props.chooseCategory('architect')} }>OLYMPUS</button>
+            <button className='btn btn-outline-secondary' name='ahoj' onClick={() => {props.chooseCategory('olympus')} }>OLYMPUS</button>
         </div>
+
+        <div className='col'>
+            <button className='btn btn-outline-secondary' name='ahoj' onClick={() => {props.chooseCategory('mocarna')} }>MOČÁRNA</button>
+    </div>
+
 
         
     </div>
@@ -27,8 +33,8 @@ const Category = (props) => (
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        chooseCategory: (categoryArg) => {
-            dispatch(chooseCategory(categoryArg))
+        chooseCategory: (groupArg) => {
+            dispatch(chooseCategory(groupArg))
         }
     }
 };

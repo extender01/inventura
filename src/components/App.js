@@ -4,7 +4,7 @@ import '../styles/App.css';
 
 import Heading from './Heading';
 import Input from './Input';
-import List from './List';
+import Lists from './Lists';
 import Category from './Category';
 
 // import 'bootstrap/dist/css/bootstrap.css';
@@ -27,7 +27,8 @@ class App extends React.Component {
         <Heading />
         <Category />
         <Input />
-        <List />
+
+        <Lists />
       </div>
     );
   }

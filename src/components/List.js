@@ -5,8 +5,13 @@ import Item from './Item';
 
 const List = (props) => (
     <div className='list'>
+       
+    
         {props.items.map((element, index) => {
-            return <Item key={index} catNumber={element.catNumber} name={element.name} amount={element.amount} />
+            if(props.category === element.category) {
+                return <Item key={index} catNumber={element.catNumber} name={element.name} amount={element.amount} />
+            }
+            return undefined
         })}
     
     </div>
@@ -18,7 +23,8 @@ const List = (props) => (
 
 const mapStateToProps = (state) => {
     return {
-        items: state.inventura.items
+        items: state.inventura.items,
+        group: state.inventura.group
     }
 };
 

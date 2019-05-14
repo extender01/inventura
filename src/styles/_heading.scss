@@ -1,3 +1,9 @@
 .heading {
     @include frc();
 }
+
+@media print {
+    .heading {
+        display: none;
+    }
+}

@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlus, faMinus, faCircleNotch } from '@fortawesome/free-solid-svg-icons';
 
 const Item = (props) => (
-   <div className='item'>
+   <div className={props.active === props.name ? 'item item__active' : 'item'}>
         <p className='item__cat'>{props.catNumber}</p>
         <p className='item__name'>{props.name}</p>
         <p className='item__amount'>{props.amount}</p>
@@ -18,6 +18,12 @@ const Item = (props) => (
    </div>
 );
 
+const mapStateToProps = (state) => {
+    return {
+        active: state.inventura.active
+    }
+}
+
 const mapDispatchToProps = (dispatch) => {
     return {
         changeAmount: (operationArg, nameArg) => {
@@ -26,4 +32,4 @@ const mapDispatchToProps = (dispatch) => {
     }
 }
 
-export default connect(undefined, mapDispatchToProps)(Item);
+export default connect(mapStateToProps, mapDispatchToProps)(Item);
