@@ -1,6 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import {changeAmount} from '../actions/inventuraActions';
+import {changeAmount, clearActive} from '../actions/inventuraActions';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlus, faMinus, faCircleNotch } from '@fortawesome/free-solid-svg-icons';
 
@@ -27,7 +27,9 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
     return {
         changeAmount: (operationArg, nameArg) => {
-            dispatch(changeAmount(operationArg, nameArg))
+            dispatch(changeAmount(operationArg, nameArg));
+            setTimeout(() => {dispatch(clearActive())}, 1000)
+
         }
     }
 }

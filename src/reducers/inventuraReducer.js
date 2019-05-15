@@ -1,4 +1,3 @@
-//PREDELAT ABY DEFAULT STATE MEL SEZNAM VSECH POLOZEK Z VYBRANE SKUPINY S NULAMA A VEDLE AMOUNTU TLACITKA +-
 
 
 
@@ -7,7 +6,7 @@ const inventuraReducer = (state = {items:[]}, action) => {
 
         case 'CHOOSE_CATEGORY':
             console.log(action)
-            return {...state, group: action.group,  items: action.reduced}
+            return {...state, active: undefined, group: action.group,  items: action.reduced}
 
         case 'CHANGE_AMOUNT':
             return {
@@ -58,6 +57,13 @@ const inventuraReducer = (state = {items:[]}, action) => {
             } else {
                 return {...state, active: action.addedName, items: [...state.items, {catNumber: action.addedCatNumber, name: action.addedName, amount: 1}]}
 
+            }
+
+        //ACTIVE CLASS WILL BE REMOVED AFTER TIMEOUT (SET IN COMPONENTS)
+        case 'CLEAR_ACTIVE':
+            return {
+                ...state,
+                active: undefined
             }
 
 

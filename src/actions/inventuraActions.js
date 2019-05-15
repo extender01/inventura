@@ -35,5 +35,12 @@ export const changeAmount = (operation, name) => {
     }
 };
 
+//FOR CLEARING ACTIVE CLASS FOR CSS ANIMATION WHEN ITEM IS ADDED
+export const clearActive = () => {
+    return {
+        type: 'CLEAR_ACTIVE'
+    }
+};
+
 
 

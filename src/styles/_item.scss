@@ -1,21 +1,28 @@
 .item {
     @include frs();
     border: 1px grey solid;
+    border-bottom: none;
     border-radius: 3px;
-    margin: .6rem 0;
+    // margin: .2rem 0;
     font-weight: 600;
     color: #333;
     padding: 0 .5rem;
 
+    & p {
+        margin: .5rem 0;
+    }
+
     &__active {
-        
-        animation: goGreen 2s 1;
+        -webkit-animation-play-state: paused;
+        animation-play-state: paused;
+        -webkit-animation-iteration-count: 1;
+        animation-iteration-count: 1;
+        animation: goGreen 1s 1;
     }
 
     @keyframes goGreen
     {
-        0%      {background:none;}
-        10%     {background:greenyellow;}
+        0%     {background:greenyellow;}
         100%    {background:none;}
     }
 
@@ -57,10 +64,12 @@
 
 @media print {
 
-    html {
-        font-size: 62.5%;
-    }
+   
   .item__modifiers {
     display: none;
   }
 }
+
+
+
+

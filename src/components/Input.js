@@ -1,13 +1,19 @@
 import React from 'react';
 import {connect} from 'react-redux';
 
-import {addItem} from '../actions/inventuraActions';
+import {addItem, clearActive} from '../actions/inventuraActions';
 import {barcodeDB} from '../data/barcodeDB';
 
 
 
 class Input extends React.Component {
     
+    constructor(props) {
+        super(props);
+        this.bcInput = React.createRef();
+
+
+    }
 
    
 
@@ -30,7 +36,7 @@ class Input extends React.Component {
         return (
             <div className='input'>
                 <form onSubmit={this.parseBC} className='col form-group'>
-                    <input className='input__field' name='input__field' id='input-field' placeholder='ČAROVÝ KÓD' />
+                    <input ref={this.bcInput} className='input__field' name='input__field' id='input-field' placeholder='ČAROVÝ KÓD' />
                     <button className='btn'>PŘIDAT POLOŽKU</button>
                 </form>
             </div>
@@ -48,6 +54,8 @@ const mapDispatchToProps = (dispatch) => {
     return {
         addItem: (newNameArg, newCatNumberArg) => {
             dispatch(addItem(newNameArg, newCatNumberArg))
+            setTimeout(() => {dispatch(clearActive())}, 1000)
+
         }
     }
 }
