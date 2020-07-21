@@ -272,7 +272,7 @@ export const barcodeDB = [
 
     },
     {
-        gtin: 'XXXXXXXXXXXXXXX',
+        gtin: '00380740017750',
         catNumber: '8L4425',
         name: 'ARC ANTI-HBC II 8L4425 RGT',
         alias: 'anti-HBc',
@@ -282,7 +282,7 @@ export const barcodeDB = [
 
     },
     {
-        gtin: 'XXXXXXXXXXXXXXX',
+        gtin: '00380740116149',
         catNumber: '6C3325',
         name: 'ARC ANTI-HBC M 6C3325',
         alias: 'anti-HBc-IgM',
@@ -302,7 +302,7 @@ export const barcodeDB = [
 
     },
     {
-        gtin: 'XXXXXXXXXXXXXXX',
+        gtin: '00380740138059',
         catNumber: '7C1827',
         name: 'ARC ANTI-HBS RGT 100 7C1827',
         alias: 'anti-HBs',
@@ -460,8 +460,298 @@ export const barcodeDB = [
         category: 'architect',
         group: 'architect'
 
-    }
-   
+    },
+    {
+        gtin: '15099590010065',
+        catNumber: 'OSR6107',
+        name: 'Alanineaminotransferase',
+        alias: 'ALT',
+        type: 'rgt',
+        category: 'AU',
+        group: 'AU'
+
+    },
+    {
+        gtin: '15099590010010',
+        catNumber: 'OSR6102',
+        name: 'Albumin',
+        alias: 'Albumin',
+        type: 'rgt',
+        category: 'AU',
+        group: 'AU'
+
+    },
+    {
+        gtin: '15099590010034',
+        catNumber: 'OSR6104',
+        name: 'Alk. fosfatáza',
+        alias: 'ALP',
+        type: 'rgt',
+        category: 'AU',
+        group: 'AU'
+
+    },
+    {
+        gtin: '00845275000016',
+        catNumber: 'OSR61154',
+        name: 'Ammonia infinity reag.',
+        alias: 'Amoniak',
+        type: 'rgt',
+        category: 'AU',
+        group: 'AU'
+
+    },
+    {
+        gtin: '15099590010775',
+        catNumber: 'OSR6182',
+        name: 'Amylase',
+        alias: 'Amyláza',
+        type: 'rgt',
+        category: 'AU',
+        group: 'AU'
+
+    },
+    {
+        gtin: '15099590010904',
+        catNumber: 'OSR6194',
+        name: 'Anti-streptolysin (ASO)',
+        alias: 'ASO, ASLO',
+        type: 'rgt',
+        category: 'AU',
+        group: 'AU'
+
+    },
+    {
+        gtin: '15099590020026',
+        catNumber: 'OSR6209',
+        name: 'Aspartateaminotransferase',
+        alias: 'AST',
+        type: 'rgt',
+        category: 'AU',
+        group: 'AU'
+
+    },
+    {
+        gtin: '15099590010485',
+        catNumber: 'OSR6151',
+        name: 'B-2-Mikroglobulin',
+        alias: 'B-2-M',
+        type: 'rgt',
+        category: 'AU',
+        group: 'AU'
+
+    },
+    {
+        gtin: '15099590010485',
+        catNumber: 'OSR6159',
+        name: 'C3 (complement 3)',
+        alias: 'C3',
+        type: 'rgt',
+        category: 'AU',
+        group: 'AU'
+
+    },
+    {
+        gtin: '15099590010485',
+        catNumber: 'OSR6160',
+        name: 'C4 (complement 4)',
+        alias: 'C4',
+        type: 'rgt',
+        category: 'AU',
+        group: 'AU'
+
+    },
+    {
+        gtin: '15099590010485',
+        catNumber: 'OSR60117',
+        name: 'Calcium arzenazo',
+        alias: 'Ca-vápník',
+        type: 'rgt',
+        category: 'AU',
+        group: 'AU'
+
+    },
+    {
+        gtin: '15099590010485',
+        catNumber: '66039',
+        name: 'Cleaning solution 6x500ml',
+        alias: 'Cleaning sol',
+        type: 'rgt',
+        category: 'AU',
+        group: 'AU'
+
+    },
+    {
+        gtin: '15099590010485',
+        catNumber: 'OSR6179',
+        name: 'Creatine kinase CK NAC',
+        alias: 'CK-NAC',
+        type: 'rgt',
+        category: 'AU',
+        group: 'AU'
+
+    },
+    {
+        gtin: '15099590010485',
+        catNumber: 'OSR61204',
+        name: 'Creatinine (enzymatic)',
+        alias: 'Kreatinin',
+        type: 'rgt',
+        category: 'AU',
+        group: 'AU'
+
+    },
+    {
+        gtin: '15099590010485',
+        catNumber: 'ODC0027',
+        name: 'CRP latex highly sensit.calibrator',
+        alias: 'CRP calib. HIGH',
+        type: 'cal',
+        category: 'AU',
+        group: 'AU'
+
+    },
+    {
+        gtin: '15099590010485',
+        catNumber: 'ODC0026',
+        name: 'CRP latex normal calibrator',
+        alias: 'CRP claib. Normal',
+        type: 'cal',
+        category: 'AU',
+        group: 'AU'
+
+    },
+    {
+        gtin: '15099590010485',
+        catNumber: 'OSR6199',
+        name: 'CRP latex reagent',
+        alias: 'CRP latex',
+        type: 'rgt',
+        category: 'AU',
+        group: 'AU'
+
+    },
+    {
+        gtin: '15099590010485',
+        catNumber: 'OSR6111',
+        name: 'Direct bilirubin',
+        alias: 'Bilirubin direct OSR6111',
+        type: 'rgt',
+        category: 'AU',
+        group: 'AU'
+
+    },
+    {
+        gtin: '15099590010485',
+        catNumber: 'OSR4T229',
+        name: 'EMIT2000 GENTAMYCIN ASSAY',
+        alias: 'Gantamicin reagencie',
+        type: 'rgt',
+        category: 'AU',
+        group: 'AU'
+
+    },
+    {
+        gtin: '15099590010485',
+        catNumber: '4T209UL',
+        name: 'EMIT2000 GENTAMYCIN CAL',
+        alias: 'Gentamicin kalibrátor',
+        type: 'cal',
+        category: 'AU',
+        group: 'AU'
+
+    },
+    {
+        gtin: '15099590010485',
+        catNumber: 'OSR4W220',
+        name: 'EMIT2000 VANKOMYCIN ASSAY',
+        alias: 'Vankomycin reagencie',
+        type: 'rgt',
+        category: 'AU',
+        group: 'AU'
+
+    },
+    {
+        gtin: '15099590010485',
+        catNumber: '4W109UL',
+        name: 'EMIT2000 VANKOMYCIN CAL',
+        alias: 'Vankomycin kalibrátor',
+        type: 'cal',
+        category: 'AU',
+        group: 'AU'
+
+    },
+    {
+        gtin: '15099590010485',
+        catNumber: 'OSR 9K229',
+        name: 'ETHANOL (reagencie)-Beckman',
+        alias: 'EtOH',
+        type: 'rgt',
+        category: 'AU',
+        group: 'AU'
+
+    },
+    {
+        gtin: '15099590010485',
+        catNumber: '9K059UL',
+        name: 'ETHANOL KALIBRÁTOR 1-Beckman (neg.)',
+        alias: '',
+        type: 'cal',
+        category: 'AU',
+        group: 'AU'
+
+    },
+    {
+        gtin: '15099590010485',
+        catNumber: '9K059UL',
+        name: 'ETHANOL KALIBRÁTOR 2- Beckman',
+        alias: 'Mikro',
+        type: 'cal',
+        category: 'AU',
+        group: 'AU'
+
+    },
+    {
+        gtin: '15099590010485',
+        catNumber: 'OSR61203',
+        name: 'Ferritin reagent',
+        alias: 'Ferritin',
+        type: 'rgt',
+        category: 'AU',
+        group: 'AU'
+
+    },
+    {
+        gtin: '15099590010485',
+        catNumber: 'OSR6120',
+        name: 'Gamaglutamyltransferase',
+        alias: 'GGT, GMT',
+        type: 'rgt',
+        category: 'AU',
+        group: 'AU'
+
+    },
+    {
+        gtin: '15099590010485',
+        catNumber: 'OSR6221',
+        name: 'Glucose',
+        alias: 'Glucose',
+        type: 'rgt',
+        category: 'AU',
+        group: 'AU'
+
+    },
+    {
+        gtin: '15099590010485',
+        catNumber: 'OSR6151',
+        name: 'Mikroglobulin',
+        alias: 'Mikro',
+        type: 'rgt',
+        category: 'AU',
+        group: 'AU'
+
+    },
+
 
 ]
 

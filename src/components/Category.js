@@ -18,7 +18,7 @@ const Category = (props) => (
         </div>
 
         <div className='col'>
-            <button className='btn btn-outline-secondary' name='ahoj' onClick={() => {props.chooseCategory('olympus')} }>OLYMPUS</button>
+            <button className='btn btn-outline-secondary' name='ahoj' onClick={() => {props.chooseCategory('AU')} }>OLYMPUS</button>
         </div>
 
         <div className='col'>

@@ -39,6 +39,7 @@ class Input extends React.Component {
                     <input autoComplete='off' ref={this.bcInput} className='input__field' name='input__field' id='input-field' placeholder='ČAROVÝ KÓD' />
                     <button className='btn'>PŘIDAT POLOŽKU</button>
                 </form>
+                <button className='btn' onClick={() => {window.print()}}>TISK</button>
             </div>
         );
     }

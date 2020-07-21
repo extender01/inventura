@@ -41,7 +41,7 @@ export default connect(mapStateToProps)(Lists);
 const ggg = {
     architect: ['architect', 'prospec'],
     radiometer: ['radiometer', 'tosoh', 'pathfast'],
-    olympus: ['olympus'],
+    AU: ['AU'],
     mocarna: ['mocarna', 'elfo', 'glykemie', 'osmolalita']
 };
 

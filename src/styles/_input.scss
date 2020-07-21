@@ -4,9 +4,21 @@
     @include frs();
     margin: 1rem 0;
     &__field {
-        height: 2rem;
+        height: 3.1rem;
+        padding-left: 1.5rem;
+        
+        
     }
+
+    & input {
+      margin: .5rem 3rem;
+
+    }
+
+    
 }
+
+
 
 @media print {
 
