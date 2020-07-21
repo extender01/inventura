@@ -36,7 +36,7 @@ class Input extends React.Component {
         return (
             <div className='input'>
                 <form onSubmit={this.parseBC} className='col form-group'>
-                    <input ref={this.bcInput} className='input__field' name='input__field' id='input-field' placeholder='ČAROVÝ KÓD' />
+                    <input autoComplete='off' ref={this.bcInput} className='input__field' name='input__field' id='input-field' placeholder='ČAROVÝ KÓD' />
                     <button className='btn'>PŘIDAT POLOŽKU</button>
                 </form>
             </div>

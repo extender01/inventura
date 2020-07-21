@@ -6,10 +6,10 @@ import Item from './Item';
 const List = (props) => (
     <div className='list'>
        
-    
+        <Item catNumber='kat.číslo' name='název' amount='počet' />
         {props.items.map((element, index) => {
             if(props.category === element.category) {
-                return <Item key={index} catNumber={element.catNumber} name={element.name} amount={element.amount} />
+                return <Item key={index} catNumber={element.catNumber} name={element.name} amount={element.amount} alias={element.alias} type={element.type} />
             }
             return undefined
         })}

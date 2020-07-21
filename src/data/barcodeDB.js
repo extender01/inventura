@@ -272,7 +272,7 @@ export const barcodeDB = [
 
     },
     {
-        gtin: '',
+        gtin: 'XXXXXXXXXXXXXXX',
         catNumber: '8L4425',
         name: 'ARC ANTI-HBC II 8L4425 RGT',
         alias: 'anti-HBc',
@@ -282,7 +282,7 @@ export const barcodeDB = [
 
     },
     {
-        gtin: '',
+        gtin: 'XXXXXXXXXXXXXXX',
         catNumber: '6C3325',
         name: 'ARC ANTI-HBC M 6C3325',
         alias: 'anti-HBc-IgM',
@@ -292,7 +292,7 @@ export const barcodeDB = [
 
     },
     {
-        gtin: '',
+        gtin: 'XXXXXXXXXXXXXXX',
         catNumber: '6C3425',
         name: 'ARC ANTI-HBE RGT 6C3425',
         alias: 'anti-HBe',
@@ -302,7 +302,7 @@ export const barcodeDB = [
 
     },
     {
-        gtin: '',
+        gtin: 'XXXXXXXXXXXXXXX',
         catNumber: '7C1827',
         name: 'ARC ANTI-HBS RGT 100 7C1827',
         alias: 'anti-HBs',
@@ -342,7 +342,7 @@ export const barcodeDB = [
 
     },
     {
-        gtin: '',
+        gtin: 'XXXXXXXXXXXXXXX',
         catNumber: '6C3225',
         name: 'ARC HBEAG RGT 6C3225',
         alias: 'HBeAg',
@@ -382,7 +382,7 @@ export const barcodeDB = [
 
     },
     {
-        gtin: '',
+        gtin: 'XXXXXXXXXXXXXXX',
         catNumber: '',
         name: 'ARC IGENT RGT ',
         alias: 'iGent',

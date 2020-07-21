@@ -8,6 +8,9 @@ const Item = (props) => (
    <div className={props.active === props.name ? 'item item__active' : 'item'}>
         <p className='item__cat'>{props.catNumber}</p>
         <p className='item__name'>{props.name}</p>
+        <p className='item_alias'>{props.alias}</p>
+        <p className='item__type'>{props.type}</p>
+
         <p className='item__amount'>{props.amount}</p>
         <div className='item__modifiers'>
             <FontAwesomeIcon onClick={() => {props.changeAmount('add', props.name)}} icon={faPlus} size='1x' color='grey' />

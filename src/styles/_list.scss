@@ -1,4 +1,17 @@
 
+.list {
+    margin-bottom: 3rem;
+
+    &__nadpis {
+        border: 1px black solid;
+        text-align: center;
+        background:rgb(184, 184, 184);
+        margin: 0;
+    }
+}
+
+
+
 @media print {
     .list {
         border: 1px grey solid;

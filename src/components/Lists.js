@@ -9,7 +9,7 @@ const Lists = (props) => (
         {props.group && ggg[props.group].map((element) => {
             return (
                 <React.Fragment>
-                    <p>Inventura pro {element}</p>
+                    <p className='list__nadpis'>Inventura reagencií {element}</p>
                     <List category={element} />
                 </React.Fragment>
 
