@@ -19,12 +19,20 @@
         background-color: rgb(231, 231, 231);
     }
 
+    &:nth-child(odd) {
+        background-color: rgb(231, 231, 231);
+    }
+
     &__active {
         -webkit-animation-play-state: paused;
         animation-play-state: paused;
         -webkit-animation-iteration-count: 1;
         animation-iteration-count: 1;
         animation: goGreen 1s 1;
+    }
+
+    &__highlighted {
+        background-color: rgb(255, 253, 126);
     }
 
     @keyframes goGreen
@@ -92,14 +100,22 @@
 
 @media print {
 
+    .item:nth-child(odd) {
+        background-color: rgb(231, 231, 231);
+    }
+
     .item p{
         margin-top: 0;
         margin-bottom: 0;
     }
    
-  .item__modifiers {
-    display: none;
-  }
+    .item__modifiers {
+        display: none;
+    }
+
+    .item__highlighted {
+      background-color: transparent;
+    }
 }
 
 

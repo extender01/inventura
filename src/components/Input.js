@@ -1,7 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux';
 
-import {addItem, clearActive} from '../actions/inventuraActions';
+import {addItem, clearActive, sumTotal} from '../actions/inventuraActions';
 import {barcodeDB} from '../data/barcodeDB';
 
 
@@ -32,6 +32,12 @@ class Input extends React.Component {
                 e.target[0].value = ''
 
     }
+
+    sum = (e) => {
+        e.preventDefault();
+        this.props.sumTotal()
+    }
+
     render() {
         return (
             <div className='input'>
@@ -40,6 +46,7 @@ class Input extends React.Component {
                     <button className='btn'>PŘIDAT POLOŽKU</button>
                 </form>
                 <button className='btn' onClick={() => {window.print()}}>TISK</button>
+                <button className='btn' onClick={this.sum}>suma</button>
             </div>
         );
     }
@@ -55,8 +62,11 @@ const mapDispatchToProps = (dispatch) => {
     return {
         addItem: (newNameArg, newCatNumberArg) => {
             dispatch(addItem(newNameArg, newCatNumberArg))
-            setTimeout(() => {dispatch(clearActive())}, 1000)
+            // setTimeout(() => {dispatch(clearActive())}, 1000)
 
+        },
+        sumTotal: () => {
+            dispatch(sumTotal())
         }
     }
 }

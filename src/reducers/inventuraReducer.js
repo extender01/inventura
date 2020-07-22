@@ -66,6 +66,16 @@ const inventuraReducer = (state = {items:[]}, action) => {
                 active: undefined
             }
 
+        case 'SUM_TOTAL':
+            let sumTotal = state.items.reduce((accumulator, currentValue) => {
+                return accumulator + currentValue.amount
+
+            }, 0)
+
+            return {
+                ...state,
+                sum: sumTotal
+            }
 
         default:
             return state;

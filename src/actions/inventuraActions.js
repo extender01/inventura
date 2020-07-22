@@ -13,7 +13,7 @@ export const chooseCategory = (group) => {
 
     let reduced = barcodeDB.reduce((accumulator, current) => {
         if(current.group === group) {
-            accumulator.push({catNumber: current.catNumber, name: current.name, alias: current.alias, type: current.type, category: current.category, amount: 0})
+            accumulator.push({catNumber: current.catNumber, name: current.name, alias: current.alias, type: current.type, category: current.category, amount: 0, gtin: current.gtin})
             
         }
         return accumulator
@@ -39,6 +39,13 @@ export const changeAmount = (operation, name) => {
 export const clearActive = () => {
     return {
         type: 'CLEAR_ACTIVE'
+    }
+};
+
+
+export const sumTotal = () => {
+    return {
+        type: 'SUM_TOTAL'
     }
 };
 
