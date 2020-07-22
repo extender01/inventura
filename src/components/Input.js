@@ -12,17 +12,17 @@ class Input extends React.Component {
         super(props);
         this.bcInput = React.createRef();
 
-
     }
 
    
 
     parseBC = (e) => {
                 e.preventDefault();
-                barcodeDB.some((element) => {
+                console.log('tohle je this state items', this.props.items)
+                this.props.items.some((element) => {
                     // if(element.gtin === e.target[0].value) {
                     if(e.target[0].value.includes(element.gtin)) {
-                        if(element.group !== this.props.group) {alert(`Položka ${element.name} nepatří do skupiny ${this.props.group} `)}
+                        // if(element.group !== this.props.group) {alert(`Položka ${element.name} nepatří do skupiny ${this.props.group} `)}
                         this.props.addItem(element.name, element.catNumber)
                         return true
                     }
@@ -54,7 +54,8 @@ class Input extends React.Component {
 
 const mapStateToProps = (state) => {
     return {
-        group: state.inventura.group
+        group: state.inventura.group,
+        items: state.inventura.items
     }
 };
 
